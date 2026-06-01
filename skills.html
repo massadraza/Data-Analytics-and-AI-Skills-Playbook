@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skills · Data Analytics & AI Skills Playbook</title>
+  <meta name="description" content="Browse all 14 skills in the Data Analytics & AI Skills Playbook." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<header class="site">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <span class="logo">DA</span>
+      <span>Data Analytics &amp; AI Skills Playbook</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="index.html#install">Install</a>
+      <a href="https://github.com/massadraza/Data-Analytics-and-AI-Skills-Playbook" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <span class="eyebrow">Skill catalog</span>
+    <h2 style="margin-top:14px;">All 14 skills, grouped by what they do</h2>
+    <p class="section-sub">Each skill is a single markdown prompt. Click "View source" to see the full prompt that gets sent to your AI assistant.</p>
+
+    <!-- ============ DATA QUALITY & AUDITING ============ -->
+    <div class="category">
+      <h2>📊 Data Quality &amp; Auditing</h2>
+      <p class="cat-sub">Catch problems in your data and pipeline before they reach your model.</p>
+      <div class="skill-grid">
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/dataset-health</span>
+            <span class="pill">Audit</span>
+          </div>
+          <h3>Dataset health check</h3>
+          <p>Audits missing values, class imbalance, temporal gaps, duplicates, outliers, and per-cultivar coverage. Flags anything that could undermine model reliability.</p>
+          <a class="view" href="skills/dataset-health.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/data-leakage</span>
+            <span class="pill">Audit</span>
+          </div>
+          <h3>Data leakage detector</h3>
+          <p>Scans Python ML files for train/test contamination, future-data leakage, scaler/encoder leakage, and CV-fold leakage. Reports file paths, line numbers, and fixes.</p>
+          <a class="view" href="skills/data-leakage.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/feature-audit</span>
+            <span class="pill">Audit</span>
+          </div>
+          <h3>Feature inventory audit</h3>
+          <p>Builds a matrix of which features each model uses, flags inconsistencies, collinearity risks, and features that depend on physical sensors vs. weather data alone.</p>
+          <a class="view" href="skills/feature-audit.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/temporal-split</span>
+            <span class="pill">Audit</span>
+          </div>
+          <h3>Temporal split validator</h3>
+          <p>Audits train/test split strategy for time-series integrity. Detects random splits that leak future data and shows corrected temporal-split code per model.</p>
+          <a class="view" href="skills/temporal-split.md">View source →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ============ MODEL EVALUATION ============ -->
+    <div class="category">
+      <h2>🎯 Model Evaluation</h2>
+      <p class="cat-sub">Understand how your model actually performs — beyond a single accuracy number.</p>
+      <div class="skill-grid">
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/eval-report</span>
+            <span class="pill">Eval</span>
+          </div>
+          <h3>Full evaluation report</h3>
+          <p>Generates classifier metrics (precision, recall, F1, AUC), regressor metrics (RMSE, MAE, R²), per-cultivar breakdown, top failure cases, and calibration check.</p>
+          <a class="view" href="skills/eval-report.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/model-compare</span>
+            <span class="pill">Eval</span>
+          </div>
+          <h3>Cross-model comparison</h3>
+          <p>Walks every model folder and builds a comparison table: architecture, features used, metrics, hyperparameters. Flags strongest model and which are experimental.</p>
+          <a class="view" href="skills/model-compare.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/overfitting-check</span>
+            <span class="pill">Eval</span>
+          </div>
+          <h3>Overfitting risk scorer</h3>
+          <p>Compares train vs. test gap, checks model complexity and regularization, audits CV strategy. Assigns each model a Low / Medium / High overfitting risk score.</p>
+          <a class="view" href="skills/overfitting-check.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/feature-importance</span>
+            <span class="pill">Eval</span>
+          </div>
+          <h3>Feature importance explainer</h3>
+          <p>Extracts and ranks feature_importances_ or SHAP values, separates Stage 1 vs. Stage 2 drivers, flags redundant or surprising features, checks stability across versions.</p>
+          <a class="view" href="skills/feature-importance.md">View source →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ============ TUNING & OPTIMIZATION ============ -->
+    <div class="category">
+      <h2>⚙️ Tuning &amp; Optimization</h2>
+      <p class="cat-sub">Squeeze more performance from a model without retraining from scratch.</p>
+      <div class="skill-grid">
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/hyperparameter-suggest</span>
+            <span class="pill">Tune</span>
+          </div>
+          <h3>Hyperparameter search planner</h3>
+          <p>Proposes a search space, ranks parameter priority, generates ready-to-run Optuna or GridSearchCV code, and recommends the right CV strategy for your data.</p>
+          <a class="view" href="skills/hyperparameter-suggest.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/threshold-tune</span>
+            <span class="pill">Tune</span>
+          </div>
+          <h3>Decision threshold tuner</h3>
+          <p>Sweeps the classification threshold across a range, frames the false-negative vs. false-positive cost tradeoff, and recommends an optimal cutoff with justification.</p>
+          <a class="view" href="skills/threshold-tune.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/cultivar-analysis</span>
+            <span class="pill">Tune</span>
+          </div>
+          <h3>Per-cultivar performance analysis</h3>
+          <p>Breaks down model metrics by turfgrass cultivar, identifies most/least susceptible varieties, and decides whether to pool or train separate per-cultivar models.</p>
+          <a class="view" href="skills/cultivar-analysis.md">View source →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ============ DEPLOYMENT & EXPLANATION ============ -->
+    <div class="category">
+      <h2>🚀 Deployment &amp; Explanation</h2>
+      <p class="cat-sub">Get models out of notebooks and into production — and explain what they're doing.</p>
+      <div class="skill-grid">
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/model-to-api</span>
+            <span class="pill">Deploy</span>
+          </div>
+          <h3>FastAPI packager</h3>
+          <p>Serializes the model, generates a FastAPI <code>/predict</code> endpoint with Pydantic input validation, response schema, and a ready-to-run curl example.</p>
+          <a class="view" href="skills/model-to-api.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/prediction-explainer</span>
+            <span class="pill">Explain</span>
+          </div>
+          <h3>Plain-English prediction explainer</h3>
+          <p>For a given set of inputs, explains which features drove the prediction, runs a counterfactual ("what would flip this?"), and flags extrapolation risk — for non-technical readers.</p>
+          <a class="view" href="skills/prediction-explainer.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/new-model</span>
+            <span class="pill">Scaffold</span>
+          </div>
+          <h3>New model experiment scaffolder</h3>
+          <p>Creates a new model folder from a template, updates the pipeline for any feature changes, and writes a README describing the experiment and how it differs from prior models.</p>
+          <a class="view" href="skills/new-model.md">View source →</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site">
+  <div class="container row">
+    <div>© 2026 Data Analytics &amp; AI Skills Playbook · MIT License</div>
+    <div>
+      <a href="index.html">Home</a> ·
+      <a href="https://github.com/massadraza/Data-Analytics-and-AI-Skills-Playbook" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

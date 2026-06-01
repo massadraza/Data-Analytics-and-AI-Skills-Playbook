@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Analytics & AI Skills Playbook</title>
+  <meta name="description" content="A reusable library of AI prompts for data analytics and machine learning workflows. Works across Claude Code, Cursor, Copilot, and more." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<header class="site">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <span class="logo">DA</span>
+      <span>Data Analytics &amp; AI Skills Playbook</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="#install">Install</a>
+      <a href="https://github.com/massadraza/Data-Analytics-and-AI-Skills-Playbook" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">14 reusable skills · 4 categories</span>
+    <h1>Stop re-typing the same prompts.<br/><span class="grad">Run them as skills instead.</span></h1>
+    <p class="lead">
+      A curated library of AI prompts for everyday data analytics and machine
+      learning work — auditing datasets, evaluating models, tuning hyperparameters,
+      and shipping predictions to an API. Install once, trigger from any AI assistant.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#install">Get started</a>
+      <a class="btn btn-secondary" href="skills.html">Browse skills →</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num">14</div><div class="label">Skills</div></div>
+      <div class="stat"><div class="num">4</div><div class="label">Categories</div></div>
+      <div class="stat"><div class="num">6+</div><div class="label">Supported Tools</div></div>
+      <div class="stat"><div class="num">MIT</div><div class="label">License</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container">
+    <h2>What's inside</h2>
+    <p class="section-sub">Each skill is a single markdown file. No dependencies, no install scripts — just a prompt your AI assistant can run on demand.</p>
+
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="icon">📊</div>
+        <h3>Data Quality &amp; Auditing</h3>
+        <p>Catch missing values, class imbalance, data leakage, and broken train/test splits before they wreck your model.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🎯</div>
+        <h3>Model Evaluation</h3>
+        <p>Generate full eval reports, compare model versions, check for overfitting, and extract feature importance with one command.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🚀</div>
+        <h3>Tuning &amp; Deployment</h3>
+        <p>Suggest hyperparameter searches, tune decision thresholds, explain individual predictions, and package the final model as a FastAPI service.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Works with your AI tool of choice</h2>
+    <p class="section-sub">Markdown skills work anywhere your assistant accepts prompts. First-class support for Claude Code; copy-paste compatible everywhere else.</p>
+    <div class="tools">
+      <div class="tool"><span class="glyph">🤖</span>Claude Code</div>
+      <div class="tool"><span class="glyph">🟦</span>Cursor</div>
+      <div class="tool"><span class="glyph">🟣</span>Copilot</div>
+      <div class="tool"><span class="glyph">🟩</span>VS Code</div>
+      <div class="tool"><span class="glyph">🟧</span>Codex</div>
+      <div class="tool"><span class="glyph">🟨</span>Windsurf</div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="install">
+  <div class="container">
+    <h2>Get started in 3 steps</h2>
+    <p class="section-sub">Designed for Claude Code, but the markdown files work in any AI tool.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Clone the repo</h3>
+        <p>Grab all 14 skills locally.</p>
+<pre class="code">git clone https://github.com/massadraza/\
+Data-Analytics-and-AI-Skills-Playbook.git</pre>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Drop into your project</h3>
+        <p>Copy the skills folder into your project's <code>.claude/commands/</code> directory.</p>
+<pre class="code">cp Data-Analytics-and-AI-Skills-Playbook/skills/*.md \
+   your-project/.claude/commands/</pre>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Trigger from your AI</h3>
+        <p>Inside Claude Code, type a slash command:</p>
+<pre class="code">/dataset-health
+/eval-report
+/feature-importance</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="container row">
+    <div>© 2026 Data Analytics &amp; AI Skills Playbook · MIT License</div>
+    <div>
+      <a href="skills.html">Skills</a> ·
+      <a href="https://github.com/massadraza/Data-Analytics-and-AI-Skills-Playbook" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
