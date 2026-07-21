@@ -1,6 +1,6 @@
 # Data Analytics & AI Skills Playbook
 
-A reusable library of 14 AI prompts ("skills") for everyday data analytics and machine learning workflows — auditing datasets, evaluating models, tuning hyperparameters, and shipping predictions to an API.
+A reusable library of 16 AI prompts ("skills") for everyday data analytics, machine learning, and AI agent-pipeline workflows — auditing datasets, evaluating models, tuning hyperparameters, shipping predictions to an API, and auditing LLM/RAG pipelines.
 
 Built for [Claude Code](https://claude.com/claude-code), but the markdown files work in any AI assistant (Cursor, Copilot, VS Code, Codex, Windsurf, Gemini CLI, etc.).
 
@@ -29,6 +29,10 @@ Built for [Claude Code](https://claude.com/claude-code), but the markdown files 
 - `model-to-api` — package model as a FastAPI service
 - `prediction-explainer` — plain-English explanation of a single prediction
 - `new-model` — scaffold a new experiment from a template
+
+### 🤖 AI Agent Pipelines
+- `pipeline-trace-audit` — node-by-node health check for LangGraph/multi-agent pipelines (latency, errors, state drift)
+- `source-grounding-audit` — verify LLM/RAG output is grounded in source documents, flag hallucinated claims
 
 ## Install
 
