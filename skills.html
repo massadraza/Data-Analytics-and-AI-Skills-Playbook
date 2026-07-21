@@ -235,6 +235,65 @@
       </div>
     </div>
 
+    <!-- ============ SYSTEM DESIGN & ENGINEERING ============ -->
+    <div class="category">
+      <h2>🛠️ System Design &amp; Engineering</h2>
+      <p class="cat-sub">Harden production systems for reliability, scalability, observability, and security.</p>
+      <div class="skill-grid">
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/resilience-check</span>
+            <span class="pill">Reliability</span>
+          </div>
+          <h3>Timeout &amp; retry coverage audit</h3>
+          <p>Finds external calls with missing timeouts or retry/backoff, and traces cascading failure risk across the pipeline.</p>
+          <a class="view" href="skills/resilience-check.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/observability-audit</span>
+            <span class="pill">Observability</span>
+          </div>
+          <h3>Logging, metrics &amp; traceability check</h3>
+          <p>Checks failure-prone boundaries for logging and metrics coverage, flags silent failures, and verifies runs are traceable end-to-end.</p>
+          <a class="view" href="skills/observability-audit.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/bottleneck-scan</span>
+            <span class="pill">Scale</span>
+          </div>
+          <h3>Scalability bottleneck scan</h3>
+          <p>Finds sync-in-async calls, N+1 query patterns, unbounded loops, and single points of failure before they bite at scale.</p>
+          <a class="view" href="skills/bottleneck-scan.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/idempotency-check</span>
+            <span class="pill">Reliability</span>
+          </div>
+          <h3>Duplicate-side-effect check</h3>
+          <p>Flags operations unsafe to run twice — duplicate sends, duplicate writes — and checks recovery behavior after partial failure.</p>
+          <a class="view" href="skills/idempotency-check.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/secrets-exposure-scan</span>
+            <span class="pill">Security</span>
+          </div>
+          <h3>Secrets exposure scan</h3>
+          <p>Finds hardcoded secrets, <code>.env</code> hygiene issues, config/log leakage, and secrets accidentally bundled into frontend code.</p>
+          <a class="view" href="skills/secrets-exposure-scan.md">View source →</a>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
