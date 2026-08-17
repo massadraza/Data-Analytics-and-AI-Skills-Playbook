@@ -416,13 +416,13 @@
 
 <!-- ── Install ── -->
 <section class="section container" id="install" aria-labelledby="install-heading" style="border-top: 1px solid var(--border);">
-  <h2 id="install-heading">Get started in 3 steps</h2>
+  <h2 id="install-heading">Get started in 4 steps</h2>
   <p class="section-sub">
     Skills are slash commands in Claude Code. The same markdown files work
     in Copilot, Cursor, Codex, and Windsurf without modification.
   </p>
 
-  <div class="steps-grid">
+  <div class="steps-grid" style="grid-template-columns: repeat(2, 1fr);">
     <div class="step-card">
       <div class="step-num" aria-hidden="true">1</div>
       <h3>Clone the repo</h3>
@@ -452,8 +452,20 @@
 
     <div class="step-card">
       <div class="step-num" aria-hidden="true">3</div>
+      <h3>Copy the workflows <span style="color:var(--dim);font-weight:500;">(optional)</span></h3>
+      <p>To get the 6 multi-agent workflows, copy them into <code>.claude/workflows/</code> alongside the skills.</p>
+      <div class="os-tabs" role="tablist" aria-label="Shell">
+        <button class="os-tab active" role="tab" aria-selected="true"  data-tab="bash-3">bash / zsh</button>
+        <button class="os-tab"        role="tab" aria-selected="false" data-tab="ps-3">PowerShell</button>
+      </div>
+      <pre class="code" id="bash-3" role="tabpanel">cp Data-Analytics-and-AI-Skills-Playbook/.claude/workflows/*.js your-project/.claude/workflows/</pre>
+      <pre class="code" id="ps-3"   role="tabpanel" hidden>Copy-Item Data-Analytics-and-AI-Skills-Playbook\.claude\workflows\*.js your-project\.claude\workflows\</pre>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num" aria-hidden="true">4</div>
       <h3>Invoke from your assistant</h3>
-      <p>Run a skill as a slash command, or paste the file into any AI chat.</p>
+      <p>Run a skill as a slash command, or trigger a workflow by name:</p>
       <pre class="code">/dataset-health
 /eval-report
 /pipeline-trace-audit
