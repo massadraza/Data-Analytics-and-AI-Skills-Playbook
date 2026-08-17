@@ -257,6 +257,110 @@
   </div>
 </section>
 
+<!-- ── Workflows ── -->
+<section class="section container" aria-labelledby="workflows-heading" style="border-top: 1px solid var(--border);">
+  <h2 id="workflows-heading">Multi-agent workflows</h2>
+  <p class="section-sub">
+    Workflows fan out multiple skills in parallel, verify findings adversarially,
+    and synthesize a single prioritized report. One command replaces hours of manual review.
+  </p>
+  <div class="workflow-grid">
+
+    <div class="workflow-card">
+      <div class="workflow-head">
+        <span class="workflow-cmd">production-readiness-audit</span>
+        <span class="workflow-tag">5 skills</span>
+      </div>
+      <h3>Production readiness audit</h3>
+      <p>Pre-ship audit covering reliability, observability, scalability, idempotency, and secrets hygiene — for any backend service or pipeline.</p>
+      <div class="workflow-phases">
+        <span class="phase-pill">Audit</span>
+        <span class="phase-arrow">→</span>
+        <span class="phase-pill">Verify</span>
+      </div>
+    </div>
+
+    <div class="workflow-card">
+      <div class="workflow-head">
+        <span class="workflow-cmd">pr-readiness-check</span>
+        <span class="workflow-tag">4 dimensions</span>
+      </div>
+      <h3>PR readiness check</h3>
+      <p>Reviews your diff across correctness, simplification, security, and test coverage before opening a PR — with adversarial verification per finding.</p>
+      <div class="workflow-phases">
+        <span class="phase-pill">Review</span>
+        <span class="phase-arrow">→</span>
+        <span class="phase-pill">Verify</span>
+      </div>
+    </div>
+
+    <div class="workflow-card">
+      <div class="workflow-head">
+        <span class="workflow-cmd">model-experiment-cycle</span>
+        <span class="workflow-tag">4 skills</span>
+      </div>
+      <h3>Model experiment cycle</h3>
+      <p>Runs data health, eval, feature signal, and tuning suggestions in parallel, then synthesizes a concrete next-experiment plan grounded in the current model state.</p>
+      <div class="workflow-phases">
+        <span class="phase-pill">Assess</span>
+        <span class="phase-arrow">→</span>
+        <span class="phase-pill">Recommend</span>
+        <span class="phase-arrow">→</span>
+        <span class="phase-pill">Plan</span>
+      </div>
+    </div>
+
+    <div class="workflow-card">
+      <div class="workflow-head">
+        <span class="workflow-cmd">newsletter-pipeline-audit</span>
+        <span class="workflow-tag">6 skills</span>
+      </div>
+      <h3>Newsletter pipeline audit</h3>
+      <p>Full-pipeline audit for LangGraph-style multi-agent content pipelines — routing, cost, RAG, QC, ops, and prompt regression — before a release or deploy.</p>
+      <div class="workflow-phases">
+        <span class="phase-pill">Audit</span>
+        <span class="phase-arrow">→</span>
+        <span class="phase-pill">Verify</span>
+        <span class="phase-arrow">→</span>
+        <span class="phase-pill">Synthesize</span>
+      </div>
+    </div>
+
+    <div class="workflow-card">
+      <div class="workflow-head">
+        <span class="workflow-cmd">staged-forecast-model-audit</span>
+        <span class="workflow-tag">8 skills</span>
+      </div>
+      <h3>Staged forecast model audit</h3>
+      <p>Full audit for staged time-series forecasting models (classifier gate + regressor) — leakage, temporal splits, gating logic, and horizon checks — before retraining or shipping.</p>
+      <div class="workflow-phases">
+        <span class="phase-pill">Audit</span>
+        <span class="phase-arrow">→</span>
+        <span class="phase-pill">Verify</span>
+        <span class="phase-arrow">→</span>
+        <span class="phase-pill">Synthesize</span>
+      </div>
+    </div>
+
+    <div class="workflow-card">
+      <div class="workflow-head">
+        <span class="workflow-cmd">codebase-onboarding-map</span>
+        <span class="workflow-tag">parallel</span>
+      </div>
+      <h3>Codebase onboarding map</h3>
+      <p>Explores a codebase module-by-module in parallel and synthesizes an architecture overview — useful for onboarding or regenerating a stale CLAUDE.md.</p>
+      <div class="workflow-phases">
+        <span class="phase-pill">Discover</span>
+        <span class="phase-arrow">→</span>
+        <span class="phase-pill">Map</span>
+        <span class="phase-arrow">→</span>
+        <span class="phase-pill">Synthesize</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- ── Tool compatibility ── -->
 <section class="section container" aria-labelledby="tools-heading" style="border-top: 1px solid var(--border);">
   <h2 id="tools-heading">Works with your AI tool of choice</h2>

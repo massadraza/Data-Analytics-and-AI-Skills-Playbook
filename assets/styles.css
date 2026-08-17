@@ -40,18 +40,16 @@ html, body {
 }
 
 /* grain texture */
-body::before {
+body::after {
   content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: 9999;
   opacity: 0.025;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 180px;
 }
-
-* { position: relative; z-index: 1; }
 
 a { color: var(--green); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -410,6 +408,87 @@ h2 {
 }
 .skill-desc { font-size: 12px; color: var(--dim); margin-top: 2px; line-height: 1.45; }
 .skill-arrow { color: var(--dim-2); font-size: 12px; flex-shrink: 0; }
+
+/* ── Workflow cards ── */
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+@media (max-width: 900px) { .workflow-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .workflow-grid { grid-template-columns: 1fr; } }
+
+.workflow-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color .12s;
+}
+.workflow-card:hover { border-color: var(--border-2); }
+
+.workflow-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.workflow-cmd {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--green);
+  font-weight: 600;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.workflow-tag {
+  font-size: 11px;
+  color: var(--dim);
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.workflow-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.workflow-card p {
+  font-size: 13px;
+  color: var(--dim);
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+.workflow-phases {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+.phase-pill {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--dim);
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+.phase-arrow {
+  font-size: 11px;
+  color: var(--dim-2);
+}
 
 /* ── Tool grid ── */
 .tool-grid {
