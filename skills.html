@@ -159,8 +159,8 @@
             <span class="name">/cultivar-analysis</span>
             <span class="pill">Tune</span>
           </div>
-          <h3>Per-cultivar performance analysis</h3>
-          <p>Breaks down model metrics by turfgrass cultivar, identifies most/least susceptible varieties, and decides whether to pool or train separate per-cultivar models.</p>
+          <h3>Per-group performance analysis</h3>
+          <p>Breaks down model metrics by any categorical grouping column (segment, cohort, region), identifies best/worst-performing groups, and decides whether to pool or train separate per-group models.</p>
           <a class="view" href="skills/cultivar-analysis.md">View source →</a>
         </div>
 
@@ -230,6 +230,134 @@
           <h3>Hallucination &amp; RAG grounding check</h3>
           <p>Extracts factual claims from LLM/RAG output, matches each against source documents, and flags ungrounded or misattributed claims by risk level.</p>
           <a class="view" href="skills/source-grounding-audit.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/multi-agent-routing-audit</span>
+            <span class="pill">Audit</span>
+          </div>
+          <h3>Agent routing &amp; orchestration audit</h3>
+          <p>Maps every routing decision in a multi-agent pipeline, flags unhandled fallback cases, and checks LLM-driven routing has guardrails for high-stakes branches.</p>
+          <a class="view" href="skills/multi-agent-routing-audit.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/llm-pipeline-cost-audit</span>
+            <span class="pill">Cost</span>
+          </div>
+          <h3>LLM cost &amp; latency audit</h3>
+          <p>Inventories every LLM call site, flags oversized models for simple tasks, redundant/uncached calls, and serial calls that could run in parallel.</p>
+          <a class="view" href="skills/llm-pipeline-cost-audit.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/content-qc-audit</span>
+            <span class="pill">Verify</span>
+          </div>
+          <h3>AI content quality-gate audit</h3>
+          <p>Checks that plagiarism, fact-check, and citation gates actually cover every generated content type, and that failures can't silently reach publish.</p>
+          <a class="view" href="skills/content-qc-audit.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/agent-prompt-regression-check</span>
+            <span class="pill">Verify</span>
+          </div>
+          <h3>Agent prompt regression check</h3>
+          <p>Reviews a system-prompt diff for removed guardrails, new ambiguity, and downstream format breakage, and drafts golden test cases to catch regressions next time.</p>
+          <a class="view" href="skills/agent-prompt-regression-check.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/vector-rag-index-audit</span>
+            <span class="pill">Audit</span>
+          </div>
+          <h3>Vector store / RAG index health check</h3>
+          <p>Checks embedding staleness, chunking quality, duplicate entries, and retrieval relevance so a RAG pipeline doesn't quietly degrade over time.</p>
+          <a class="view" href="skills/vector-rag-index-audit.md">View source →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ============ FULL-STACK & OPS ENGINEERING ============ -->
+    <div class="category">
+      <h2>🧩 Full-Stack &amp; Ops Engineering</h2>
+      <p class="cat-sub">Catch the drift and reliability gaps that live between the model, the API, the frontend, and the scheduler.</p>
+      <div class="skill-grid">
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/training-serving-skew-check</span>
+            <span class="pill">Audit</span>
+          </div>
+          <h3>Train/serve feature parity check</h3>
+          <p>Diffs feature computation logic between the training pipeline and the serving path to catch silent skew — rounding, windows, null-handling, version drift.</p>
+          <a class="view" href="skills/training-serving-skew-check.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/full-stack-schema-drift-check</span>
+            <span class="pill">Audit</span>
+          </div>
+          <h3>API ↔ frontend schema drift check</h3>
+          <p>Compares backend Pydantic/DB schemas against frontend TypeScript types to catch field, type, and required/optional mismatches before they break the UI.</p>
+          <a class="view" href="skills/full-stack-schema-drift-check.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/scheduled-job-reliability-audit</span>
+            <span class="pill">Reliability</span>
+          </div>
+          <h3>Cron/scheduled job reliability audit</h3>
+          <p>Checks failure alerting, partial-run recovery, retry idempotency, and dependency staleness handling for scheduled pipelines.</p>
+          <a class="view" href="skills/scheduled-job-reliability-audit.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/external-api-quota-audit</span>
+            <span class="pill">Reliability</span>
+          </div>
+          <h3>Third-party API quota &amp; backoff audit</h3>
+          <p>Inventories external API calls, flags fan-out calls at risk of hitting rate limits, and checks backoff and quota-exhaustion behavior.</p>
+          <a class="view" href="skills/external-api-quota-audit.md">View source →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ============ STAGED & TIME-SERIES PIPELINES ============ -->
+    <div class="category">
+      <h2>📈 Staged &amp; Time-Series Pipelines</h2>
+      <p class="cat-sub">Catch boundary bugs in multi-stage models and forecasting pipelines that inflate offline metrics.</p>
+      <div class="skill-grid">
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/staged-model-gating-audit</span>
+            <span class="pill">Audit</span>
+          </div>
+          <h3>Multi-stage gating &amp; regime-switch audit</h3>
+          <p>Checks gating logic between a classifier stage and a downstream model for leakage, threshold sensitivity, and train/serve skew.</p>
+          <a class="view" href="skills/staged-model-gating-audit.md">View source →</a>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span class="name">/forecast-horizon-audit</span>
+            <span class="pill">Verify</span>
+          </div>
+          <h3>Recursive forecast leakage check</h3>
+          <p>Checks whether a time-series model's reported metrics reflect true multi-step forecasting or are quietly relying on 1-step-ahead ground truth.</p>
+          <a class="view" href="skills/forecast-horizon-audit.md">View source →</a>
         </div>
 
       </div>

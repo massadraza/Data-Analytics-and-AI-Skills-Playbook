@@ -96,24 +96,29 @@
       <div class="step">
         <div class="num">1</div>
         <h3>Clone the repo</h3>
-        <p>Grab all 14 skills locally.</p>
+        <p>Grab all 32 skills locally.</p>
 <pre class="code">git clone https://github.com/massadraza/\
 Data-Analytics-and-AI-Skills-Playbook.git</pre>
       </div>
       <div class="step">
         <div class="num">2</div>
         <h3>Drop into your project</h3>
-        <p>Copy the skills folder into your project's <code>.claude/commands/</code> directory.</p>
+        <p>Copy the skills into <code>.claude/commands/</code> and, if you want the multi-agent workflows, <code>.claude/workflows/</code> too.</p>
 <pre class="code">cp Data-Analytics-and-AI-Skills-Playbook/skills/*.md \
-   your-project/.claude/commands/</pre>
+   your-project/.claude/commands/
+cp Data-Analytics-and-AI-Skills-Playbook/.claude/workflows/*.js \
+   your-project/.claude/workflows/</pre>
       </div>
       <div class="step">
         <div class="num">3</div>
         <h3>Trigger from your AI</h3>
-        <p>Inside Claude Code, type a slash command:</p>
+        <p>Run one skill as a slash command, or a whole audit as a workflow:</p>
 <pre class="code">/dataset-health
 /eval-report
-/feature-importance</pre>
+/feature-importance
+
+Workflow: pr-readiness-check
+Workflow: production-readiness-audit</pre>
       </div>
     </div>
   </div>
