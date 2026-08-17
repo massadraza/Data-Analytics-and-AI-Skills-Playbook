@@ -3,128 +3,364 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Data Analytics & AI Skills Playbook</title>
-  <meta name="description" content="A reusable library of AI prompts for data analytics and machine learning workflows. Works across Claude Code, Cursor, Copilot, and more." />
+  <title>Data Analytics &amp; AI Skills Playbook</title>
+  <meta name="description" content="32 reusable AI prompt skills for data analytics, machine learning, and agent-pipeline work. One command replaces hours of manual review. Works in Claude Code, Copilot, Cursor, Codex, and more." />
+  <meta property="og:title" content="Data Analytics &amp; AI Skills Playbook" />
+  <meta property="og:description" content="32 AI prompt skills for data analytics, ML, and agent pipelines. Install once, invoke from any AI assistant." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://massadraza.github.io/Data-Analytics-and-AI-Skills-Playbook/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
 
+<a href="#main" class="skip-link">Skip to main content</a>
+
 <header class="site">
   <div class="container nav">
-    <a class="brand" href="index.html">
-      <span class="logo">DA</span>
-      <span>Data Analytics &amp; AI Skills Playbook</span>
-    </a>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="skills.html">Skills</a>
-      <a href="#install">Install</a>
-      <a href="https://github.com/massadraza/Data-Analytics-and-AI-Skills-Playbook" target="_blank" rel="noopener">GitHub</a>
+    <a class="brand" href="index.html">Data Analytics &amp; AI Skills Playbook</a>
+    <nav aria-label="Site navigation">
+      <ul class="nav-links">
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="#install">Install</a></li>
+        <li><a href="https://github.com/massadraza/Data-Analytics-and-AI-Skills-Playbook" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="#install" class="nav-cta">Get started</a></li>
+      </ul>
     </nav>
   </div>
 </header>
 
-<section class="hero">
-  <div class="container">
-    <span class="eyebrow">32 reusable skills · 8 categories</span>
-    <h1>Stop re-typing the same prompts.<br/><span class="grad">Run them as skills instead.</span></h1>
-    <p class="lead">
-      A curated library of AI prompts for everyday data analytics, machine
-      learning, and AI agent-pipeline work — auditing datasets, evaluating models,
-      tuning hyperparameters, shipping predictions to an API, and hardening
-      production systems. Install once, trigger from any AI assistant — with
-      native integration for Claude Code, GitHub Copilot, and Codex.
+<main id="main">
+
+<!-- ── Hero ── -->
+<section class="hero container" aria-label="Introduction">
+  <div class="hero-left">
+    <div class="tool-strip" aria-label="Compatible tools">
+      <span class="tool-pill primary">Claude Code</span>
+      <span class="tool-pill">Cursor</span>
+      <span class="tool-pill">Copilot</span>
+      <span class="tool-pill">Codex</span>
+      <span class="tool-pill">Windsurf</span>
+    </div>
+    <h1>Stop running the same checks from memory.</h1>
+    <p class="hero-lead">
+      32 reusable AI prompt skills for data analytics, machine learning,
+      and agent-pipeline work. Install once — invoke as a slash command
+      from any AI assistant.
     </p>
     <div class="cta-row">
       <a class="btn btn-primary" href="#install">Get started</a>
-      <a class="btn btn-secondary" href="skills.html">Browse skills →</a>
+      <a class="btn btn-secondary" href="skills.html">Browse 32 skills →</a>
     </div>
+  </div>
 
-    <div class="stats">
-      <div class="stat"><div class="num">32</div><div class="label">Skills</div></div>
-      <div class="stat"><div class="num">8</div><div class="label">Categories</div></div>
-      <div class="stat"><div class="num">6</div><div class="label">Workflows</div></div>
-      <div class="stat"><div class="num">MIT</div><div class="label">License</div></div>
+  <div class="hero-right" aria-hidden="true">
+    <div class="split-pane">
+      <div class="pane-bar">
+        <div class="pane-dots">
+          <span class="pane-dot r"></span>
+          <span class="pane-dot y"></span>
+          <span class="pane-dot g"></span>
+        </div>
+        <span class="pane-title">Command → Output</span>
+      </div>
+      <div class="pane-body">
+        <div class="pane-in">
+          <p class="pane-label">Invoke</p>
+          <p class="pane-cmd">/dataset-health</p>
+          <p class="pane-desc">Audits missing values, class balance, temporal leakage, and train/test integrity — in one command.</p>
+        </div>
+        <div class="pane-out">
+          <p class="pane-label">Output</p>
+          <div class="result-row">
+            <i class="result-icon ok" aria-hidden="true">✓</i>
+            <span class="result-text"><strong>Shape</strong> 142,891 × 23 features</span>
+          </div>
+          <div class="result-row">
+            <i class="result-icon ok" aria-hidden="true">✓</i>
+            <span class="result-text"><strong>No duplicates</strong> detected</span>
+          </div>
+          <div class="result-row">
+            <i class="result-icon fail" aria-hidden="true">✗</i>
+            <span class="result-text"><strong>Class imbalance</strong> 94.3% negative</span>
+          </div>
+          <div class="result-row">
+            <i class="result-icon fail" aria-hidden="true">✗</i>
+            <span class="result-text"><strong>Temporal leak</strong> split_date in features</span>
+          </div>
+          <div class="result-row">
+            <i class="result-icon warn" aria-hidden="true">⚠</i>
+            <span class="result-text"><strong>Missing values</strong> 2 cols &gt; 15%</span>
+          </div>
+          <hr class="result-hr" />
+          <p class="result-summary"><b>2 critical</b> · 1 warning · fix before training</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="alt">
-  <div class="container">
-    <h2>What's inside</h2>
-    <p class="section-sub">Each skill is a single markdown file. No dependencies, no install scripts — just a prompt your AI assistant can run on demand.</p>
+<!-- ── Stats ── -->
+<div class="stats-strip" aria-label="Library statistics">
+  <div class="container stats-inner">
+    <div class="stat-cell">
+      <div class="stat-num">32</div>
+      <div class="stat-lbl">Skills</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">8</div>
+      <div class="stat-lbl">Categories</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">6</div>
+      <div class="stat-lbl">Workflows</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">MIT</div>
+      <div class="stat-lbl">License</div>
+    </div>
+  </div>
+</div>
 
-    <div class="feature-grid">
-      <div class="feature">
-        <div class="icon">📊</div>
-        <h3>Data Quality &amp; Auditing</h3>
-        <p>Catch missing values, class imbalance, data leakage, and broken train/test splits before they wreck your model.</p>
+<!-- ── What's inside ── -->
+<section class="section container" aria-labelledby="inside-heading">
+  <h2 id="inside-heading">What's inside</h2>
+  <p class="section-sub">
+    Each skill is a markdown file you invoke as a slash command. Multi-step
+    reviews are called workflows. No dependencies, no install scripts.
+  </p>
+
+  <div class="cat-group">
+    <div class="cat-header">
+      <span class="cat-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </span>
+      <span class="cat-name">Data Quality &amp; Auditing</span>
+      <span class="cat-count">4 skills</span>
+    </div>
+    <div class="skill-rows">
+      <a href="skills.html" class="skill-row">
+        <div class="skill-row-left">
+          <div class="skill-cmd">/dataset-health</div>
+          <div class="skill-desc">Missing values, class imbalance, temporal gaps, outliers</div>
+        </div>
+        <span class="skill-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="skills.html" class="skill-row">
+        <div class="skill-row-left">
+          <div class="skill-cmd">/data-leakage</div>
+          <div class="skill-desc">Train/test contamination, future leakage in features</div>
+        </div>
+        <span class="skill-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="skills.html" class="skill-row">
+        <div class="skill-row-left">
+          <div class="skill-cmd">/feature-audit</div>
+          <div class="skill-desc">Inventory features across models, flag inconsistencies</div>
+        </div>
+        <span class="skill-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="skills.html" class="skill-row">
+        <div class="skill-row-left">
+          <div class="skill-cmd">/temporal-split</div>
+          <div class="skill-desc">Validate train/test splits for time-series integrity</div>
+        </div>
+        <span class="skill-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="cat-group">
+    <div class="cat-header">
+      <span class="cat-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+      </span>
+      <span class="cat-name">Model Evaluation</span>
+      <span class="cat-count">4 skills</span>
+    </div>
+    <div class="skill-rows">
+      <a href="skills.html" class="skill-row">
+        <div class="skill-row-left">
+          <div class="skill-cmd">/eval-report</div>
+          <div class="skill-desc">Full classifier + regressor metrics, failure cases, calibration</div>
+        </div>
+        <span class="skill-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="skills.html" class="skill-row">
+        <div class="skill-row-left">
+          <div class="skill-cmd">/overfitting-check</div>
+          <div class="skill-desc">Low/Medium/High overfitting risk per model</div>
+        </div>
+        <span class="skill-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="skills.html" class="skill-row">
+        <div class="skill-row-left">
+          <div class="skill-cmd">/model-compare</div>
+          <div class="skill-desc">Cross-model comparison table</div>
+        </div>
+        <span class="skill-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="skills.html" class="skill-row">
+        <div class="skill-row-left">
+          <div class="skill-cmd">/feature-importance</div>
+          <div class="skill-desc">Ranked drivers + plain-English explanation</div>
+        </div>
+        <span class="skill-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="cat-group">
+    <div class="cat-header">
+      <span class="cat-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+      </span>
+      <span class="cat-name">AI Agent Pipelines</span>
+      <span class="cat-count">4 skills</span>
+    </div>
+    <div class="skill-rows">
+      <a href="skills.html" class="skill-row">
+        <div class="skill-row-left">
+          <div class="skill-cmd">/pipeline-trace-audit</div>
+          <div class="skill-desc">Node-by-node health check for LangGraph/multi-agent pipelines</div>
+        </div>
+        <span class="skill-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="skills.html" class="skill-row">
+        <div class="skill-row-left">
+          <div class="skill-cmd">/source-grounding-audit</div>
+          <div class="skill-desc">Verify LLM/RAG output is grounded in source documents</div>
+        </div>
+        <span class="skill-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="skills.html" class="skill-row">
+        <div class="skill-row-left">
+          <div class="skill-cmd">/multi-agent-routing-audit</div>
+          <div class="skill-desc">Map routing logic, flag unhandled fallback branches</div>
+        </div>
+        <span class="skill-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="skills.html" class="skill-row">
+        <div class="skill-row-left">
+          <div class="skill-cmd">/model-to-api</div>
+          <div class="skill-desc">Package model as a production FastAPI service</div>
+        </div>
+        <span class="skill-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div style="margin-top: 24px;">
+    <a class="btn btn-secondary" href="skills.html">See all 32 skills →</a>
+  </div>
+</section>
+
+<!-- ── Tool compatibility ── -->
+<section class="section container" aria-labelledby="tools-heading" style="border-top: 1px solid var(--border);">
+  <h2 id="tools-heading">Works with your AI tool of choice</h2>
+  <p class="section-sub">
+    Each skill is a plain markdown file. Native slash commands in Claude Code;
+    paste-compatible everywhere else.
+  </p>
+  <div class="tool-grid">
+    <div class="tool-card">
+      <div class="tool-card-name">
+        Claude Code
+        <span class="tool-badge native">Native</span>
       </div>
-      <div class="feature">
-        <div class="icon">🎯</div>
-        <h3>Model Evaluation</h3>
-        <p>Generate full eval reports, compare model versions, check for overfitting, and extract feature importance with one command.</p>
+      <p class="tool-card-desc">Full slash command integration. Skills live in <code style="font-family:var(--mono);font-size:12px;color:var(--text);background:var(--bg-2);border:1px solid var(--border);border-radius:4px;padding:1px 5px;">.claude/commands/</code>.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-name">
+        GitHub Copilot
+        <span class="tool-badge compat">Compatible</span>
       </div>
-      <div class="feature">
-        <div class="icon">🚀</div>
-        <h3>Tuning &amp; Deployment</h3>
-        <p>Suggest hyperparameter searches, tune decision thresholds, explain individual predictions, and package the final model as a FastAPI service.</p>
+      <p class="tool-card-desc">Ships native <code style="font-family:var(--mono);font-size:12px;color:var(--text);background:var(--bg-2);border:1px solid var(--border);border-radius:4px;padding:1px 5px;">copilot-instructions.md</code> that routes Copilot to the right skill automatically.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-name">
+        Cursor
+        <span class="tool-badge compat">Compatible</span>
       </div>
+      <p class="tool-card-desc">Drop skills into <code style="font-family:var(--mono);font-size:12px;color:var(--text);background:var(--bg-2);border:1px solid var(--border);border-radius:4px;padding:1px 5px;">.cursor/rules/</code> or reference them directly in the Cursor chat.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-name">
+        Codex
+        <span class="tool-badge compat">Compatible</span>
+      </div>
+      <p class="tool-card-desc">Ships an <code style="font-family:var(--mono);font-size:12px;color:var(--text);background:var(--bg-2);border:1px solid var(--border);border-radius:4px;padding:1px 5px;">AGENTS.md</code> that points Codex at the right skill for each task.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-name">
+        Windsurf
+        <span class="tool-badge compat">Compatible</span>
+      </div>
+      <p class="tool-card-desc">Paste any skill file contents directly into Windsurf chat, or add to project rules.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-name">
+        Any chat assistant
+        <span class="tool-badge compat">Compatible</span>
+      </div>
+      <p class="tool-card-desc">Each skill is plain text. Copy, paste, and run in any AI tool that accepts prompts.</p>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <h2>Works with your AI tool of choice</h2>
-    <p class="section-sub">Markdown skills work anywhere your assistant accepts prompts. First-class support for Claude Code; copy-paste compatible everywhere else.</p>
-    <div class="tools">
-      <div class="tool"><span class="glyph">🤖</span>Claude Code</div>
-      <div class="tool"><span class="glyph">🟦</span>Cursor</div>
-      <div class="tool"><span class="glyph">🟣</span>Copilot</div>
-      <div class="tool"><span class="glyph">🟩</span>VS Code</div>
-      <div class="tool"><span class="glyph">🟧</span>Codex</div>
-      <div class="tool"><span class="glyph">🟨</span>Windsurf</div>
+<!-- ── Install ── -->
+<section class="section container" id="install" aria-labelledby="install-heading" style="border-top: 1px solid var(--border);">
+  <h2 id="install-heading">Get started in 3 steps</h2>
+  <p class="section-sub">
+    Skills are slash commands in Claude Code. The same markdown files work
+    in Copilot, Cursor, Codex, and Windsurf without modification.
+  </p>
+
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num" aria-hidden="true">1</div>
+      <h3>Clone the repo</h3>
+      <p>Grab all 32 skills and 6 workflows locally.</p>
+      <div class="os-tabs" role="tablist" aria-label="Shell">
+        <button class="os-tab active" role="tab" aria-selected="true"  data-tab="bash-1">bash / zsh</button>
+        <button class="os-tab"        role="tab" aria-selected="false" data-tab="ps-1">PowerShell</button>
+      </div>
+      <pre class="code" id="bash-1" role="tabpanel">git clone https://github.com/massadraza/Data-Analytics-and-AI-Skills-Playbook.git</pre>
+      <pre class="code" id="ps-1"   role="tabpanel" hidden>git clone https://github.com/massadraza/Data-Analytics-and-AI-Skills-Playbook.git</pre>
     </div>
-  </div>
-</section>
 
-<section class="alt" id="install">
-  <div class="container">
-    <h2>Get started in 3 steps</h2>
-    <p class="section-sub">Designed for Claude Code, but the markdown files work in any AI tool.</p>
+    <div class="step-card">
+      <div class="step-num" aria-hidden="true">2</div>
+      <h3>Drop into your project</h3>
+      <p>
+        <strong style="color:var(--text);font-weight:600;">Claude Code:</strong> copy skills to <code>.claude/commands/</code>.<br/>
+        <strong style="color:var(--text);font-weight:600;">Copilot / Cursor:</strong> drop in <code>.github/prompts/</code> or reference directly in chat.
+      </p>
+      <div class="os-tabs" role="tablist" aria-label="Shell">
+        <button class="os-tab active" role="tab" aria-selected="true"  data-tab="bash-2">bash / zsh</button>
+        <button class="os-tab"        role="tab" aria-selected="false" data-tab="ps-2">PowerShell</button>
+      </div>
+      <pre class="code" id="bash-2" role="tabpanel">cp Data-Analytics-and-AI-Skills-Playbook/skills/*.md your-project/.claude/commands/</pre>
+      <pre class="code" id="ps-2"   role="tabpanel" hidden>Copy-Item Data-Analytics-and-AI-Skills-Playbook\skills\*.md your-project\.claude\commands\</pre>
+    </div>
 
-    <div class="steps">
-      <div class="step">
-        <div class="num">1</div>
-        <h3>Clone the repo</h3>
-        <p>Grab all 32 skills locally.</p>
-<pre class="code">git clone https://github.com/massadraza/\
-Data-Analytics-and-AI-Skills-Playbook.git</pre>
-      </div>
-      <div class="step">
-        <div class="num">2</div>
-        <h3>Drop into your project</h3>
-        <p>Copy the skills into <code>.claude/commands/</code> and, if you want the multi-agent workflows, <code>.claude/workflows/</code> too.</p>
-<pre class="code">cp Data-Analytics-and-AI-Skills-Playbook/skills/*.md \
-   your-project/.claude/commands/
-cp Data-Analytics-and-AI-Skills-Playbook/.claude/workflows/*.js \
-   your-project/.claude/workflows/</pre>
-      </div>
-      <div class="step">
-        <div class="num">3</div>
-        <h3>Trigger from your AI</h3>
-        <p>Run one skill as a slash command, or a whole audit as a workflow:</p>
-<pre class="code">/dataset-health
+    <div class="step-card">
+      <div class="step-num" aria-hidden="true">3</div>
+      <h3>Invoke from your assistant</h3>
+      <p>Run a skill as a slash command, or paste the file into any AI chat.</p>
+      <pre class="code">/dataset-health
 /eval-report
-/feature-importance
+/pipeline-trace-audit
 
-Workflow: pr-readiness-check
-Workflow: production-readiness-audit</pre>
-      </div>
+Workflow: production-readiness-audit
+Workflow: pr-readiness-check</pre>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="site">
   <div class="container row">
@@ -135,6 +371,30 @@ Workflow: production-readiness-audit</pre>
     </div>
   </div>
 </footer>
+
+<script>
+// OS tab switcher
+document.querySelectorAll('.os-tabs').forEach(function(tablist) {
+  tablist.querySelectorAll('.os-tab').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var targetId = btn.dataset.tab;
+      // deactivate all tabs + panels in this tablist
+      tablist.querySelectorAll('.os-tab').forEach(function(t) {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      // hide sibling panels — find the step-card parent and hide its pre.code panels
+      var card = tablist.closest('.step-card');
+      card.querySelectorAll('pre.code[id]').forEach(function(p) { p.hidden = true; });
+      // activate clicked tab
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      var panel = document.getElementById(targetId);
+      if (panel) panel.hidden = false;
+    });
+  });
+});
+</script>
 
 </body>
 </html>

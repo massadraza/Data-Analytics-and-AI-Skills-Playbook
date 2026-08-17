@@ -5,34 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Skills · Data Analytics & AI Skills Playbook</title>
   <meta name="description" content="Browse all 32 skills in the Data Analytics & AI Skills Playbook." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
 
+<a href="#main" class="skip-link">Skip to main content</a>
+
 <header class="site">
   <div class="container nav">
-    <a class="brand" href="index.html">
-      <span class="logo">DA</span>
-      <span>Data Analytics &amp; AI Skills Playbook</span>
-    </a>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="skills.html">Skills</a>
-      <a href="index.html#install">Install</a>
-      <a href="https://github.com/massadraza/Data-Analytics-and-AI-Skills-Playbook" target="_blank" rel="noopener">GitHub</a>
+    <a class="brand" href="index.html">Data Analytics &amp; AI Skills Playbook</a>
+    <nav aria-label="Site navigation">
+      <ul class="nav-links">
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="index.html#install">Install</a></li>
+        <li><a href="https://github.com/massadraza/Data-Analytics-and-AI-Skills-Playbook" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="index.html#install" class="nav-cta">Get started</a></li>
+      </ul>
     </nav>
   </div>
 </header>
 
-<section>
-  <div class="container">
-    <span class="eyebrow">Skill catalog</span>
-    <h2 style="margin-top:14px;">All 32 skills, grouped by what they do</h2>
-    <p class="section-sub">Each skill is a single markdown prompt. Click "View source" to see the full prompt that gets sent to your AI assistant.</p>
+<main id="main">
+
+<div class="skills-hero container">
+  <h1>All 32 skills</h1>
+  <p>Each skill is a markdown file you invoke as a slash command. Click "View source" to see the full prompt.</p>
+</div>
+
+<div class="container" style="padding-top: 48px; padding-bottom: 72px;">
+    <div>
 
     <!-- ============ DATA QUALITY & AUDITING ============ -->
     <div class="category">
-      <h2>📊 Data Quality &amp; Auditing</h2>
+      <h2>Data Quality &amp; Auditing</h2>
       <p class="cat-sub">Catch problems in your data and pipeline before they reach your model.</p>
       <div class="skill-grid">
 
@@ -81,7 +88,7 @@
 
     <!-- ============ MODEL EVALUATION ============ -->
     <div class="category">
-      <h2>🎯 Model Evaluation</h2>
+      <h2>Model Evaluation</h2>
       <p class="cat-sub">Understand how your model actually performs — beyond a single accuracy number.</p>
       <div class="skill-grid">
 
@@ -130,7 +137,7 @@
 
     <!-- ============ TUNING & OPTIMIZATION ============ -->
     <div class="category">
-      <h2>⚙️ Tuning &amp; Optimization</h2>
+      <h2>Tuning &amp; Optimization</h2>
       <p class="cat-sub">Squeeze more performance from a model without retraining from scratch.</p>
       <div class="skill-grid">
 
@@ -169,7 +176,7 @@
 
     <!-- ============ DEPLOYMENT & EXPLANATION ============ -->
     <div class="category">
-      <h2>🚀 Deployment &amp; Explanation</h2>
+      <h2>Deployment &amp; Explanation</h2>
       <p class="cat-sub">Get models out of notebooks and into production — and explain what they're doing.</p>
       <div class="skill-grid">
 
@@ -208,7 +215,7 @@
 
     <!-- ============ AI AGENT PIPELINES ============ -->
     <div class="category">
-      <h2>🤖 AI Agent Pipelines</h2>
+      <h2>AI Agent Pipelines</h2>
       <p class="cat-sub">Audit LangGraph/multi-agent and RAG pipelines, not just classical ML models.</p>
       <div class="skill-grid">
 
@@ -287,7 +294,7 @@
 
     <!-- ============ FULL-STACK & OPS ENGINEERING ============ -->
     <div class="category">
-      <h2>🧩 Full-Stack &amp; Ops Engineering</h2>
+      <h2>Full-Stack &amp; Ops Engineering</h2>
       <p class="cat-sub">Catch the drift and reliability gaps that live between the model, the API, the frontend, and the scheduler.</p>
       <div class="skill-grid">
 
@@ -336,7 +343,7 @@
 
     <!-- ============ STAGED & TIME-SERIES PIPELINES ============ -->
     <div class="category">
-      <h2>📈 Staged &amp; Time-Series Pipelines</h2>
+      <h2>Staged &amp; Time-Series Pipelines</h2>
       <p class="cat-sub">Catch boundary bugs in multi-stage models and forecasting pipelines that inflate offline metrics.</p>
       <div class="skill-grid">
 
@@ -365,7 +372,7 @@
 
     <!-- ============ SYSTEM DESIGN & ENGINEERING ============ -->
     <div class="category">
-      <h2>🛠️ System Design &amp; Engineering</h2>
+      <h2>System Design &amp; Engineering</h2>
       <p class="cat-sub">Harden production systems for reliability, scalability, observability, and security.</p>
       <div class="skill-grid">
 
@@ -423,7 +430,9 @@
     </div>
 
   </div>
-</section>
+</div>
+
+</main>
 
 <footer class="site">
   <div class="container row">
